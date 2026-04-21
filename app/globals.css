@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* custom global */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV STYLE */
+.nav-item {
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.nav-item:hover {
+  background: rgba(56, 189, 248, 0.12);
+  box-shadow:
+    0 0 10px rgba(56, 189, 248, 0.7),
+    inset 0 0 6px rgba(56, 189, 248, 0.3);
+}
+
+.nav-active {
+  background: rgba(56, 189, 248, 0.18);
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.9),
+    inset 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
