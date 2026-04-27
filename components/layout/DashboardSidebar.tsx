@@ -66,9 +66,14 @@ export default function DashboardSidebar() {
                   key={menu.name}
                   href={menu.href}
                   className={`
-                    nav-item group flex items-center text-white text-sm p-2 rounded-lg
+                    group flex items-center text-white text-sm rounded-lg transition-all
+                    hover:bg-white/15 hover:ring-1 hover:ring-cyan-100/40
                     ${collapsed ? "justify-center p-3" : "gap-3 px-4 py-2"}
-                    ${isActive ? "nav-active" : ""}
+                    ${
+                      isActive
+                        ? "bg-white/20 ring-1 ring-cyan-100/60 shadow-[0_0_10px_rgba(157,208,239,0.35)]"
+                        : ""
+                    }
                   `}
                 >
                   <Icon size={18} />

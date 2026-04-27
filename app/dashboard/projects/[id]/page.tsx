@@ -77,7 +77,7 @@ export default function EditProjectsPage() {
         <input
           value={subtitle}
           onChange={(e) => setSubtitle(e.target.value)}
-          className="w-full px-4 py-2 rounded-lg bg-gray-200"
+          className="w-full px-4 py-2 text-black rounded-lg bg-gray-200"
         />
 
         {/* BUTTON */}

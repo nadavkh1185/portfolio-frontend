@@ -51,7 +51,7 @@ export default function SkillPage() {
       </div>
 
       {/* CARD LIST (SCROLL HORIZONTAL) */}
-      <div className="overflow-x-auto no-scrollbar">
+      <div className="overflow-y-auto no-scrollbar">
         <div className="flex gap-5 w-max">
           {skills.map((item) => (
             <div

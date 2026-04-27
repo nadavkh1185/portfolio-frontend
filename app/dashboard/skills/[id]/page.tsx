@@ -19,7 +19,7 @@ export default function EditSkillPage() {
   useEffect(() => {
     const load = async () => {
       const res = await apiFetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/skills/${id}`
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/skills/${id}`,
       );
 
       const data: SkillApi = await res!.json();
@@ -40,13 +40,10 @@ export default function EditSkillPage() {
 
     if (file) form.append("image", file);
 
-    await apiFetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/skills/${id}`,
-      {
-        method: "PUT",
-        body: form,
-      }
-    );
+    await apiFetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/skills/${id}`, {
+      method: "PUT",
+      body: form,
+    });
 
     router.push("/dashboard/skills");
   };
@@ -61,25 +58,15 @@ export default function EditSkillPage() {
 
         <div className="mb-3">
           {file ? (
-            <img
-              src={URL.createObjectURL(file)}
-              className="w-20"
-            />
+            <img src={URL.createObjectURL(file)} className="w-20" />
           ) : (
-            imageUrl && (
-              <img
-                src={getImageUrl(imageUrl)}
-                className="w-20"
-              />
-            )
+            imageUrl && <img src={getImageUrl(imageUrl)} className="w-20" />
           )}
         </div>
 
         <input
           type="file"
-          onChange={(e) =>
-            setFile(e.target.files?.[0] || null)
-          }
+          onChange={(e) => setFile(e.target.files?.[0] || null)}
         />
 
         {/* TITLE */}
@@ -87,7 +74,7 @@ export default function EditSkillPage() {
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full px-4 py-2 rounded-lg bg-gray-200"
+          className="w-full px-4 py-2 rounded-lg bg-gray-200 text-black"
         />
 
         {/* BUTTON */}

@@ -17,12 +17,21 @@ export default function RichTextEditor({ value, onChange }: Props) {
   }, [value]);
 
   return (
-    <div className="border rounded-lg bg-gray-200">
+    <div className="border rounded-lg bg-gray-200 text-black">
       {/* toolbar minimal */}
       <div className="flex gap-2 p-2 border-b">
-        <button onClick={() => document.execCommand("bold")} className="px-2">B</button>
-        <button onClick={() => document.execCommand("italic")} className="px-2">I</button>
-        <button onClick={() => document.execCommand("underline")} className="px-2">U</button>
+        <button onClick={() => document.execCommand("bold")} className="px-2">
+          B
+        </button>
+        <button onClick={() => document.execCommand("italic")} className="px-2">
+          I
+        </button>
+        <button
+          onClick={() => document.execCommand("underline")}
+          className="px-2"
+        >
+          U
+        </button>
       </div>
 
       <div

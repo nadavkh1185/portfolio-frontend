@@ -54,7 +54,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* CARD LIST (SCROLL HORIZONTAL) */}
-      <div className="overflow-x-auto no-scrollbar">
+      <div className="overflow-y-auto no-scrollbar">
         <div className="flex gap-5 w-max">
           {projects.map((item) => (
             <div

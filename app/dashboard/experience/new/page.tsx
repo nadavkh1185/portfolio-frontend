@@ -41,7 +41,7 @@ export default function NewExperiencePage() {
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-2 rounded bg-gray-200"
+          className="w-full p-2 rounded bg-gray-200 text-black"
         />
 
         <label className="block mt-4 mb-2">Paragraph</label>

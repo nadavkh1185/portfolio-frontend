@@ -46,7 +46,7 @@ export default function NewSkillPage() {
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full px-4 py-2 rounded-lg bg-gray-200"
+          className="w-full px-4 py-2 rounded-lg bg-gray-200 text-black"
         />
 
         {/* BUTTON */}

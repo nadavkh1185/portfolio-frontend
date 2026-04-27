@@ -1,15 +1,26 @@
-import { getToken, removeToken } from "./auth";
+import { getToken } from "./auth";
 
-export async function apiFetch(url: string, options: RequestInit = {}) {
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+export async function apiFetch(path: string, options: RequestInit = {}) {
   const token = getToken();
+  const isAbsoluteUrl = /^https?:\/\//i.test(path);
 
-  const res = await fetch(url, {
+  if (!BASE_URL && !isAbsoluteUrl) {
+    console.error("BASE URL NOT FOUND");
+    return null;
+  }
+
+  const resolvedPath = isAbsoluteUrl
+    ? path
+    : `${BASE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+
+  const res = await fetch(resolvedPath, {
     ...options,
     headers: {
       ...(options.body instanceof FormData
         ? {}
         : { "Content-Type": "application/json" }),
-
       Authorization: token ? `Bearer ${token}` : "",
       ...options.headers,
     },

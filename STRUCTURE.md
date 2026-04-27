@@ -5,7 +5,21 @@ frontend/
 | ├── login/
 │ └── page.tsx ← halaman login
 │ ├── (public)/
-│ │ └── page.tsx
+│ ├── page.tsx
+│ ├── components/
+│ │ ├── Navbar.tsx
+│ │ ├── SectionDivider.tsx
+│ │ ├── HeroSection.tsx
+│ │ ├── AboutSection.tsx
+│ │ ├── SkillsSection.tsx
+│ │ ├── ProjectsSection.tsx
+│ │ ├── ExperienceSection.tsx
+│ │ ├── ContactSection.tsx
+│ ├── hooks/
+│ │ ├── useScrollActive.ts
+│ │ ├── useAnimationInView.ts
+│ ├── styles/
+│ │ ├── animations.css
 │ │
 │ ├── dashboard/
 │ │ ├── layout.tsx

@@ -2,10 +2,10 @@ import { ProfileApi, Profile } from "@/types/profile";
 
 export function mapProfileFromApi(data: ProfileApi): Profile {
   return {
-    name: data.Name,
-    career: data.Career,
-    headline: data.Headline,
-    line: data.Line,
+    name: data.Name ?? data.name ?? "",
+    career: data.Career ?? data.career ?? "",
+    headline: data.Headline ?? data.headline ?? "",
+    line: data.Line ?? data.line ?? "",
   };
 }
 

@@ -141,7 +141,7 @@ export default function AboutPage() {
           <input
             value={formData.subtitle}
             onChange={(e) => handleChange("subtitle", e.target.value)}
-            className="w-full px-4 py-2 rounded-lg bg-gray-200 outline-none
+            className="w-full px-4 py-2 text-black rounded-lg bg-gray-200 outline-none
           focus:ring-2 focus:ring-cyan-400"
           />
         </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
           <textarea
             value={formData.paragraph1}
             onChange={(e) => handleChange("paragraph1", e.target.value)}
-            className="w-full px-4 py-2 rounded-lg bg-gray-200 outline-none
+            className="w-full px-4 py-2 text-black rounded-lg bg-gray-200 outline-none
           focus:ring-2 focus:ring-cyan-400"
           />
         </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
           <textarea
             value={formData.paragraph2}
             onChange={(e) => handleChange("paragraph2", e.target.value)}
-            className="w-full px-4 py-2 rounded-lg bg-gray-200 outline-none
+            className="w-full px-4 py-2 text-black rounded-lg bg-gray-200 outline-none
           focus:ring-2 focus:ring-cyan-400"
           />
         </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
           <textarea
             value={formData.paragraph3}
             onChange={(e) => handleChange("paragraph3", e.target.value)}
-            className="w-full px-4 py-2 rounded-lg bg-gray-200 outline-none
+            className="w-full px-4 py-2 text-black rounded-lg bg-gray-200 outline-none
           focus:ring-2 focus:ring-cyan-400"
           />
         </div>
